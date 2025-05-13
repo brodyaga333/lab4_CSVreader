@@ -12,8 +12,20 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+
+/**
+ * Утилитный класс для чтения списка Person из CSV-файла.
+ */
 public class CSVReaderApp {
 
+
+    /**
+     * Считывает данные о людях из CSV в ресурсах.
+     *
+     * @param filePath путь внутри ресурсов (например, "foreign_names.csv")
+     * @return список объектов Person
+     * @throws RuntimeException если файл не найден или формат некорректен
+     */
     public static List<Person> readPeopleFromCSV(String filePath) throws Exception {
         List<Person> people = new ArrayList<>();
         Map<String, Department> departmentMap = new HashMap<>();
